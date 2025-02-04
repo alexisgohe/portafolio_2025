@@ -9,7 +9,6 @@ import { ThemeService } from '../service/theme.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'portafolio_2025';
   isDarkMode = false;
 
   constructor(private themeService: ThemeService) {
