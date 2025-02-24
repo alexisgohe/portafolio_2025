@@ -1,27 +1,96 @@
-<div class="perfil-container">
-  <div class="perfil">
-    <div class="img-perfil">
-      <img src="assets/compu.png" alt="Computadora">
+<div class="container-portafolio">
+  <div class="perfil-container">
+    <div class="perfil">
+      <div class="img-perfil">
+        <img src="assets/compu.png" alt="Computadora">
+      </div>
+      <div class="text-perfil">
+        <h1 class="text-2xl font-bold">Front End Developer</h1>
+        <span class="badge">Abierto al trabajo</span>
+        <p>¡Hola! Soy <strong>Alexis Gómez</strong>, <a href="#" class="text-blue-500">desarrollador web</a>
+          especializado
+          en Angular.</p>
+        <p>Originario de Coatepec, Veracruz.</p>
+        <div class="redes-perfil">
+          <a href="assets/cv.pdf" target="_blank" class="btn">
+            <span class="material-icons icon-redes">mail</span> alexisgh74&#64;gmail.com
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="btn">
+            <fa-icon [icon]="faLinkedinIn"></fa-icon> LinkedIn
+          </a>
+          <a href="https://github.com" target="_blank" class="btn">
+            <fa-icon [icon]="faGithub"></fa-icon> Github
+          </a>
+          <a href="assets/cv.pdf" target="_blank" class="btn">
+            <span class="material-icons icon-redes">cloud_download</span> CV
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="text-perfil">
-      <h1 class="text-2xl font-bold">Front End Developer</h1>
-      <span class="badge">Abierto al trabajo</span>
-      <p>¡Hola! Soy <strong>Alexis Gómez</strong>, <a href="#" class="text-blue-500">desarrollador web</a> especializado
-        en Angular.</p>
-      <p>Originario de Coatepec, Veracruz</p>
-      <div class="redes-perfil">
-        <a href="assets/cv.pdf" target="_blank" class="btn">
-          <fa-icon [icon]="faMailchimp"></fa-icon> alexisgh74&#64;gmail.com
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" class="btn">
-          <fa-icon [icon]="faLinkedinIn"></fa-icon> LinkedIn
-        </a>
-        <a href="https://github.com" target="_blank" class="btn">
-          <fa-icon [icon]="faGithub"></fa-icon> Github
-        </a>
-        <a href="assets/cv.pdf" target="_blank" class="btn">
-          <fa-icon [icon]="faCloudflare"></fa-icon> CV
-        </a>
+  </div>
+
+  <div class="tecnologias">
+    <h2 class="section-title">Trabajo con las siguientes tecnologías</h2>
+    <div class="iconos-tecnologias">
+      <!-- Frontend -->
+      <img src="assets/icons/angular.svg" class="icon" />
+      <img src="assets/icons/react.svg" class="icon" />
+      <img src="assets/icons/tailwindcss.svg" class="icon" />
+
+      <!-- Backend -->
+      <img src="assets/icons/java.svg" class="icon" />
+      <img src="assets/icons/nodedotjs.svg" class="icon" />
+      <img src="assets/icons/express.svg" class="icon" />
+
+      <!-- Bases de Datos -->
+      <img src="assets/icons/postgresql.svg" class="icon" />
+      <img src="assets/icons/mysql.svg" class="icon" />
+
+      <!-- Control de Versiones -->
+      <img src="assets/icons/git.svg" class="icon" />
+    </div>
+  </div>
+
+  <div class="experiencia">
+    <h2 class="section-title">Experiencia</h2>
+
+    <div class="experience-item" *ngFor="let exp of experiencias">
+      <div class="img-experience">
+        <span class="material-icons icon-experience">{{exp.icono}}</span>
+      </div>
+      <div class="experience-content">
+        <h3 class="company">{{ exp.compania }}</h3>
+        <p class="title">{{ exp.titulo }}</p>
+        <p class="description">{{ exp.descripcion }}</p>
+      </div>
+      <div class="experience-dates">
+        <span>{{ exp.inicio }} - {{ exp.fin }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------- Proyectos -------------------- -->
+  <div class="projects-container">
+    <h2 class="section-title">Proyectos</h2>
+    <div *ngFor="let project of proyectos" class="project-card">
+      <div class="text-proyectos">
+        <span>{{ project.title }}</span>
+        <p class="description">{{ project.description }}</p>
+        <div class="technologies">
+          <ul>
+            <li class="technologies_usadas" *ngFor="let tech of project.technologies; let i = index">
+              <img [src]="project.technologiesImg[i]" [alt]="tech" width="19" height="19" style="padding: 2px;">
+              {{ tech }}
+            </li>
+          </ul>
+          <div class="actions">
+            <button class="code-btn"> Ver demo</button>
+            <button class="preview-btn">Código</button>
+          </div>
+        </div>
+      </div>
+      <div class="img-proyectos">
+        <img src="{{project.url}}" alt="">
       </div>
     </div>
   </div>

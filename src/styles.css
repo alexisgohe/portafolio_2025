@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root{
+:root {
   box-shadow: none;
   margin: 0;
   padding: 0 80px;
@@ -12,16 +12,82 @@ body.dark-theme {
   color: #ffffff;
 }
 
+/* ------------------- perfil ------------------- */
+body.dark-theme .perfil {
+  background: #121212;
+}
+
+body.dark-theme .badge {
+  background: #388E3C;
+  color: #E0E0E0;
+}
+
+body.dark-theme .icon-redes {
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .btn {
+  background: #333;
+  color: #E0E0E0;
+}
+
+body.dark-theme .btn:hover {
+  background: #444;
+}
+
+/* ------------------- tecnologias ------------------- */
+body.dark-theme .icon {
+  filter: invert(1);
+}
+
+body.dark-theme .section-title {
+  color: #E0E0E0;
+}
+
+/* ------------------ Experiencia -------------------- */
+body.dark-theme .experience-item {
+  border-bottom: 1px solid #444;
+}
+
+body.dark-theme .company,
+body.dark-theme .title,
+body.dark-theme .description,
+body.dark-theme .experience-dates {
+  color: #e0e0e0;
+}
+
+body.dark-theme .icon-experience {
+  color: #f0f0f0;
+}
+
+body.dark-theme .experience-dates {
+  color: #bbb;
+}
+
+body.dark-theme .experience-content {
+  border-left: 2px solid #444;
+  padding-left: 15px;
+}
+
 /* ------------------- fixed-footer ------------------- */
+body,
+.btn,
+.icon,
+.perfil,
+.fixed-footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body.dark-theme .fixed-footer {
   background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
 }
 
 body.dark-theme .icon-footer {
-  color: #9f9f9f;
+  color: #ccc;
 }
 
 body.dark-theme .separator {
-  background-color: #666;
+  background-color: #444;
 }

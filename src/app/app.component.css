@@ -1,8 +1,19 @@
+.container-portafolio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+/* ------------------ Perfil -------------------- */
 .perfil-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 70vw;
+  max-width: 70vw;
   padding: 20px;
+  height: 100vh;
 }
 
 .perfil {
@@ -10,6 +21,11 @@
   background: white;
   padding: 20px;
   border-radius: 10px;
+}
+
+.icon-redes {
+  color: black;
+  font-size: 20px;
 }
 
 .img-perfil img {
@@ -52,6 +68,222 @@
   background: #ddd;
 }
 
+/* ------------------ Tecnologias -------------------- */
+.tecnologias {
+  min-width: 70vw;
+  max-width: 70vw;
+  padding: 20px;
+  text-align: center;
+}
+
+.iconos-tecnologias {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+}
+
+/* ------------------ Experiencia -------------------- */
+.experiencia {
+  min-width: 70vw;
+  max-width: 70vw;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.img-experience {
+  text-align: center;
+  width: 10%;
+}
+
+.experience-content {
+  width: 70%;
+}
+
+.icon-experience {
+  font-size: 50px;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.company {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #666;
+  padding-right: 10px;
+}
+
+.experience-dates {
+  width: 20%;
+  font-size: 0.9rem;
+  color: #888;
+  white-space: nowrap;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+/* ------------------ Proyectos -------------------- */
+.projects-container {
+  min-width: 70vw;
+  max-width: 70vw;
+  padding: 20px;
+}
+
+.project-card {
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  /* background: #f8f9fa; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.technologies ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.technologies_usadas {
+  display: flex;
+  align-items: center;
+  background: #e2e6ea;
+  padding: 0rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.text-proyectos {
+  width: 70%;
+}
+
+.img-proyectos {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.divider {
+  border: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+
+.actions {
+  padding-top: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.preview-btn {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #495057;
+  color: #495057;
+}
+.preview-btn:hover {
+  color: #fff;
+}
+.preview-btn:hover:after {
+  height: 100%;
+}
+.preview-btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #495057;
+}
+
+.code-btn {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #212529;
+  color: #212529;
+}
+.code-btn:hover {
+  color: #fff;
+}
+.code-btn:hover:after {
+  height: 100%;
+}
+.code-btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #212529;
+}
+
+/* ------------------ Footer -------------------- */
 .fixed-footer {
   position: fixed;
   bottom: 0;
