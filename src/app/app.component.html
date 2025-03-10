@@ -1,5 +1,5 @@
 <div class="container-portafolio">
-  <div class="perfil-container">
+  <div id="perfil" class="perfil-container">
     <div class="perfil">
       <div class="img-perfil">
         <img src="assets/compu.png" alt="Computadora">
@@ -7,9 +7,10 @@
       <div class="text-perfil">
         <h1 class="text-2xl font-bold">Front End Developer</h1>
         <span class="badge">Abierto al trabajo</span>
-        <p>¡Hola! Soy <strong>Alexis Gómez</strong>, <a href="#" class="text-blue-500">desarrollador web</a>
+        <p>¡Hola! Soy <strong>Alexis Gómez</strong>, <a href="#tecnologias" class="text-blue-500">desarrollador web</a>
           especializado
           en Angular.</p>
+        <p>{{ 'WELCOME' | translate }}</p>
         <p>Originario de Coatepec, Veracruz.</p>
         <div class="redes-perfil">
           <a href="assets/cv.pdf" target="_blank" class="btn">
@@ -29,7 +30,7 @@
     </div>
   </div>
 
-  <div class="tecnologias">
+  <div id="tecnologias" class="tecnologias">
     <h2 class="section-title">Trabajo con las siguientes tecnologías</h2>
     <div class="iconos-tecnologias">
       <!-- Frontend -->
@@ -70,7 +71,7 @@
   </div>
 
   <!-- -------------------- Proyectos -------------------- -->
-  <div class="projects-container">
+  <div id="proyectos" class="projects-container">
     <h2 class="section-title">Proyectos</h2>
     <div *ngFor="let project of proyectos" class="project-card">
       <div class="text-proyectos">
@@ -79,7 +80,7 @@
         <div class="technologies">
           <ul>
             <li class="technologies_usadas" *ngFor="let tech of project.technologies; let i = index">
-              <img [src]="project.technologiesImg[i]" [alt]="tech" width="19" height="19" style="padding: 2px;">
+              <img [src]="project.technologiesImg[i]" [alt]="tech" width="19" height="19" style="padding-right: 5px;">
               {{ tech }}
             </li>
           </ul>
@@ -96,14 +97,22 @@
   </div>
 </div>
 
-<!-- -------------------- Footer -------------------- -->
+<!-- -------------------- Fixed Footer -------------------- -->
 <div class="fixed-footer">
   <img class="img-logo" src="assets/developersCode.png" alt="Logo DevelopersCode">
   <div class="separator"></div>
-  <a><span class="material-icons icon-footer">person</span></a>
-  <a><span class="material-icons icon-footer">code</span></a>
-  <a><span class="material-icons icon-footer">book</span></a>
+  <a href="#perfil"><span class="material-icons icon-footer">person</span></a>
+  <a href="#tecnologias"><span class="material-icons icon-footer">code</span></a>
+  <a href="#proyectos"><span class="material-icons icon-footer">book</span></a>
   <div class="separator"></div>
   <a (click)="toggleTheme()"><span class="material-icons icon-footer">dark_mode</span></a>
-  <a><span class="material-icons icon-footer">description</span></a>
+  <a (click)="switchLanguage()"><span class="material-icons icon-footer">description</span></a>
 </div>
+
+<!-- -------------------- Footer -------------------- -->
+<footer class="footer">
+  <img class="img-logo" src="assets/developersCode_original.png" alt="Logo DevelopersCode">
+  <div class="footer-content">
+    <p>&copy; 2025 Alexis Gómez. Todos los derechos reservados.</p>
+  </div>
+</footer>

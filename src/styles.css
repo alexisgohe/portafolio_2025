@@ -12,7 +12,11 @@ body.dark-theme {
   color: #ffffff;
 }
 
-/* ------------------- perfil ------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------- Perfil ------------------- */
 body.dark-theme .perfil {
   background: #121212;
 }
@@ -36,7 +40,7 @@ body.dark-theme .btn:hover {
   background: #444;
 }
 
-/* ------------------- tecnologias ------------------- */
+/* ------------------- Tecnologias ------------------- */
 body.dark-theme .icon {
   filter: invert(1);
 }
@@ -70,7 +74,57 @@ body.dark-theme .experience-content {
   padding-left: 15px;
 }
 
-/* ------------------- fixed-footer ------------------- */
+/* ------------------- Proyectos ------------------- */
+body.dark-theme .actions {
+  color: #E0E0E0;
+}
+
+body.dark-theme .actions button {
+  background-color: #333;
+  color: #E0E0E0;
+  border: 1px solid #444;
+}
+
+body.dark-theme .actions button:hover {
+  background-color: #444;
+}
+
+body.dark-theme .technologies_usadas {
+  background-color: #333;
+  color: #E0E0E0;
+  border: 1px solid #444;
+}
+
+body.dark-theme .technologies_usadas img{
+  filter: invert(1);
+}
+
+/* ------------------- Footer ------------------- */
+
+.footer .footer-content p {
+  margin: 0;
+  color: #333;
+}
+
+.footer .footer-links {
+  margin-top: 10px;
+}
+
+body.dark-theme .footer {
+  background-color: #121212;
+  border-top: 1px solid #444;
+}
+
+body.dark-theme .footer .footer-content p,
+body.dark-theme .footer .footer-links a {
+  color: #e0e0e0;
+}
+
+body.dark-theme .footer .footer-links a:hover {
+  color: #ffffff;
+}
+
+/* ------------------- Fixed Footer ------------------- */
 body,
 .btn,
 .icon,
