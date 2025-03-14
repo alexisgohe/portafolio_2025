@@ -49,61 +49,86 @@ export class AppComponent {
   ) {
     this.isDarkMode = this.themeService.isDarkMode();
     translate.setDefaultLang('es');
+
+    // Suscribirse al cambio de idioma
+    this.translate.onLangChange.subscribe(() => {
+      this.updateTranslations();
+    });
   }
 
   ngOnInit() {
-    this.experiencias = [
-      {
-        compania: 'SEFIPLAN XALAPA',
-        titulo: 'Programador',
-        descripcion:
-          'Actualmente estoy involucrado en el desarrollo de una aplicación financiera.',
-        inicio: 'Junio 2023',
-        fin: 'Actualidad',
-        icono: 'dns',
-      },
-      {
-        compania: 'Hospital Angeles',
-        titulo: 'Operador en sistemas',
-        descripcion: 'Me encargue del Soporte Técnico.',
-        inicio: 'Octubre 2019',
-        fin: 'Junio 2023',
-        icono: 'code',
-      },
-    ];
-    this.proyectos = [
-      {
-        title: 'Sistema de Gestión Financiera (SIAFEV)',
-        description:
-          'Desarrollé módulos del eje patrimonial en un sistema financiero, integrando APIs, webSocket y gestionando versiones con Git.',
-        technologies: ['Angular', 'Java EE', 'PostgreSQL'],
-        technologiesImg: [
-          'assets/icons/angular.svg',
-          'assets/icons/java.svg',
-          'assets/icons/postgresql.svg',
-        ],
-        url: 'assets/proyectos.jpg',
-      },
-      {
-        title: 'Sistema de Control Vehicular',
-        description: 'Implemento mejoras en un sistema de gestión vehicular.',
-        technologies: ['React', 'Spring', 'PostgreSQL'],
-        technologiesImg: [
-          'assets/icons/react.svg',
-          'assets/icons/spring.svg',
-          'assets/icons/postgresql.svg',
-        ],
-        url: 'assets/proyectos1.jpg',
-      },
-      {
-        title: 'Landing Page Restaurante',
-        description:
-          'Desarrollé una página estática accesible para un restaurante ficticio, enfocándome en usabilidad e inclusión.',
-        technologies: ['React'],
-        technologiesImg: ['assets/icons/react.svg'],
-        url: 'assets/proyectos1.jpg',
-      },
-    ];
+    this.updateTranslations();
+  }
+
+  // Método para actualizar las traducciones
+  private updateTranslations() {
+    this.translate.get([
+      'SEFIPLAN',
+      'PROGRAMMER',
+      'SEFIPLAN_DESC',
+      'CURRENT',
+      'JUNE',
+      'OCTOBER',
+      'HOSPITAL_ANGELES',
+      'SYSTEM_OPERATOR',
+      'HOSPITAL_DESC',
+      'PROJECT_SIAFEV_TITLE',
+      'PROJECT_SIAFEV_DESC',
+      'PROJECT_VEHICULAR_TITLE',
+      'PROJECT_VEHICULAR_DESC',
+      'PROJECT_RESTAURANT_TITLE',
+      'PROJECT_RESTAURANT_DESC'
+    ]).subscribe(translations => {
+      this.experiencias = [
+        {
+          compania: translations['SEFIPLAN'],
+          titulo: translations['PROGRAMMER'],
+          descripcion: translations['SEFIPLAN_DESC'],
+          inicio: translations['JUNE'],
+          fin: translations['CURRENT'],
+          icono: 'dns',
+        },
+        {
+          compania: translations['HOSPITAL_ANGELES'],
+          titulo: translations['SYSTEM_OPERATOR'],
+          descripcion: translations['HOSPITAL_DESC'],
+          inicio: translations['OCTOBER'],
+          fin: translations['JUNE'],
+          icono: 'code',
+        },
+      ];
+      this.proyectos = [
+        {
+          title: translations['PROJECT_SIAFEV_TITLE'],
+          description: translations['PROJECT_SIAFEV_DESC'],
+          technologies: ['Angular', 'Java EE', 'PostgreSQL'],
+          technologiesImg: [
+            'assets/icons/angular.svg',
+            'assets/icons/java.svg',
+            'assets/icons/postgresql.svg',
+          ],
+          url: 'assets/proyectos.jpg',
+        },
+        {
+          title: translations['PROJECT_VEHICULAR_TITLE'],
+          description: translations['PROJECT_VEHICULAR_DESC'],
+          technologies: ['React', 'Spring', 'PostgreSQL'],
+          technologiesImg: [
+            'assets/icons/react.svg',
+            'assets/icons/spring.svg',
+            'assets/icons/postgresql.svg',
+          ],
+          url: 'assets/proyectos1.jpg',
+        },
+        {
+          title: translations['PROJECT_RESTAURANT_TITLE'],
+          description: translations['PROJECT_RESTAURANT_DESC'],
+          technologies: ['React'],
+          technologiesImg: ['assets/icons/react.svg'],
+          url: 'assets/proyectos1.jpg',
+        },
+      ];
+    });
   }
 
   // Método para alternar el tema

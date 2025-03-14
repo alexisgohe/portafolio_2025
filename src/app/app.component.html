@@ -1,38 +1,32 @@
-<div class="container-portafolio">
-  <div id="perfil" class="perfil-container">
-    <div class="perfil">
+<div class="container-portafolio flex-column w-100">
+  <div id="perfil" class="perfil-container flex-center w-70 p-20">
+    <div class="perfil flex rounded p-20">
       <div class="img-perfil">
         <img src="assets/compu.png" alt="Computadora">
       </div>
       <div class="text-perfil">
-        <h1 class="text-2xl font-bold">Front End Developer</h1>
-        <span class="badge">Abierto al trabajo</span>
-        <p>¡Hola! Soy <strong>Alexis Gómez</strong>, <a href="#tecnologias" class="text-blue-500">desarrollador web</a>
-          especializado
-          en Angular.</p>
-        <p>{{ 'WELCOME' | translate }}</p>
-        <p>Originario de Coatepec, Veracruz.</p>
-        <div class="redes-perfil">
-          <a href="assets/cv.pdf" target="_blank" class="btn">
+        <h1 class="text-2xl font-bold">{{ 'FRONTEND_DEVELOPER' | translate }}</h1>
+        <span class="badge">{{ 'OPEN_TO_WORK' | translate }}</span>
+        <p>{{ 'INTRO' | translate }}</p>
+        <p>{{ 'ORIGIN' | translate }}</p>
+        <div class="redes-perfil flex gap-10 mt-10">
+          <a target="_blank" class="btn">
             <span class="material-icons icon-redes">mail</span> alexisgh74&#64;gmail.com
           </a>
           <a href="https://www.linkedin.com" target="_blank" class="btn">
-            <fa-icon [icon]="faLinkedinIn"></fa-icon> LinkedIn
+            <fa-icon [icon]="faLinkedinIn"></fa-icon> {{ 'LINKEDIN' | translate }}
           </a>
           <a href="https://github.com" target="_blank" class="btn">
-            <fa-icon [icon]="faGithub"></fa-icon> Github
-          </a>
-          <a href="assets/cv.pdf" target="_blank" class="btn">
-            <span class="material-icons icon-redes">cloud_download</span> CV
+            <fa-icon [icon]="faGithub"></fa-icon> {{ 'GITHUB' | translate }}
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="tecnologias" class="tecnologias">
-    <h2 class="section-title">Trabajo con las siguientes tecnologías</h2>
-    <div class="iconos-tecnologias">
+  <div id="tecnologias" class="tecnologias w-70 p-20 text-center">
+    <h2 class="section-title">{{ 'TECHNOLOGIES_TITLE' | translate }}</h2>
+    <div class="iconos-tecnologias flex gap-10">
       <!-- Frontend -->
       <img src="assets/icons/angular.svg" class="icon" />
       <img src="assets/icons/react.svg" class="icon" />
@@ -52,45 +46,45 @@
     </div>
   </div>
 
-  <div class="experiencia">
-    <h2 class="section-title">Experiencia</h2>
+  <div class="experiencia w-70 p-20">
+    <h2 class="section-title">{{ 'EXPERIENCE_TITLE' | translate }}</h2>
 
-    <div class="experience-item" *ngFor="let exp of experiencias">
-      <div class="img-experience">
+    <div class="experience-item flex mb-10" *ngFor="let exp of experiencias">
+      <div class="img-experience text-center w-10">
         <span class="material-icons icon-experience">{{exp.icono}}</span>
       </div>
-      <div class="experience-content">
+      <div class="experience-content w-70">
         <h3 class="company">{{ exp.compania }}</h3>
         <p class="title">{{ exp.titulo }}</p>
         <p class="description">{{ exp.descripcion }}</p>
       </div>
-      <div class="experience-dates">
+      <div class="experience-dates w-20">
         <span>{{ exp.inicio }} - {{ exp.fin }}</span>
       </div>
     </div>
   </div>
 
   <!-- -------------------- Proyectos -------------------- -->
-  <div id="proyectos" class="projects-container">
-    <h2 class="section-title">Proyectos</h2>
-    <div *ngFor="let project of proyectos" class="project-card">
-      <div class="text-proyectos">
+  <div id="proyectos" class="projects-container w-70 p-20">
+    <h2 class="section-title">{{ 'PROJECTS_TITLE' | translate }}</h2>
+    <div *ngFor="let project of proyectos" class="project-card flex mb-10">
+      <div class="text-proyectos w-70">
         <span>{{ project.title }}</span>
         <p class="description">{{ project.description }}</p>
         <div class="technologies">
           <ul>
-            <li class="technologies_usadas" *ngFor="let tech of project.technologies; let i = index">
-              <img [src]="project.technologiesImg[i]" [alt]="tech" width="19" height="19" style="padding-right: 5px;">
+            <li class="technologies_usadas flex gap-1" *ngFor="let tech of project.technologies; let i = index">
+              <img [src]="project.technologiesImg[i]" [alt]="tech" width="19" height="19">
               {{ tech }}
             </li>
           </ul>
-          <div class="actions">
-            <button class="code-btn"> Ver demo</button>
-            <button class="preview-btn">Código</button>
+          <div class="actions flex gap-10 mt-10">
+            <button class="code-btn">{{ 'VIEW_DEMO' | translate }}</button>
+            <button class="preview-btn">{{ 'VIEW_CODE' | translate }}</button>
           </div>
         </div>
       </div>
-      <div class="img-proyectos">
+      <div class="img-proyectos w-30">
         <img src="{{project.url}}" alt="">
       </div>
     </div>
@@ -107,12 +101,13 @@
   <div class="separator"></div>
   <a (click)="toggleTheme()"><span class="material-icons icon-footer">dark_mode</span></a>
   <a (click)="switchLanguage()"><span class="material-icons icon-footer">description</span></a>
+  <a href="assets/pdf/Alexis_Gomez_Hernandez_Curriculum_Vitae.pdf" target="_blank"><span class="material-icons icon-footer">download</span></a>
 </div>
 
 <!-- -------------------- Footer -------------------- -->
 <footer class="footer">
   <img class="img-logo" src="assets/developersCode_original.png" alt="Logo DevelopersCode">
   <div class="footer-content">
-    <p>&copy; 2025 Alexis Gómez. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Alexis Gómez. {{ 'FOOTER_COPYRIGHT' | translate }}</p>
   </div>
 </footer>
