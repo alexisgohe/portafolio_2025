@@ -1,15 +1,15 @@
-<div class="container-portafolio flex-column w-100">
-  <div id="perfil" class="perfil-container flex-center w-70 p-20">
+<div class="container-portafolio flex-column w-100" data-aos="fade-up">
+  <div id="perfil" class="perfil-container flex-center w-70 p-20" data-aos="zoom-in">
     <div class="perfil flex rounded p-20">
-      <div class="img-perfil">
+      <div class="img-perfil" data-aos="fade-right">
         <img src="assets/compu.png" alt="Computadora">
       </div>
-      <div class="text-perfil">
+      <div class="text-perfil" data-aos="fade-left">
         <h1 class="text-2xl font-bold">{{ 'FRONTEND_DEVELOPER' | translate }}</h1>
         <span class="badge">{{ 'OPEN_TO_WORK' | translate }}</span>
         <p>{{ 'INTRO' | translate }}</p>
         <p>{{ 'ORIGIN' | translate }}</p>
-        <div class="redes-perfil flex gap-10 mt-10">
+        <div class="redes-perfil flex gap-10 mt-10" data-aos="fade-up">
           <a target="_blank" class="btn">
             <span class="material-icons icon-redes">mail</span> alexisgh74&#64;gmail.com
           </a>
@@ -24,9 +24,9 @@
     </div>
   </div>
 
-  <div id="tecnologias" class="tecnologias w-70 p-20 text-center">
+  <div id="tecnologias" class="tecnologias w-70 p-20 text-center" data-aos="fade-up">
     <h2 class="section-title">{{ 'TECHNOLOGIES_TITLE' | translate }}</h2>
-    <div class="iconos-tecnologias flex gap-10">
+    <div class="iconos-tecnologias flex gap-10" data-aos="zoom-in">
       <!-- Frontend -->
       <img src="assets/icons/angular.svg" class="icon" />
       <img src="assets/icons/react.svg" class="icon" />
@@ -46,10 +46,10 @@
     </div>
   </div>
 
-  <div class="experiencia w-70 p-20">
+  <div class="experiencia w-70 p-20" data-aos="fade-up">
     <h2 class="section-title">{{ 'EXPERIENCE_TITLE' | translate }}</h2>
 
-    <div class="experience-item flex mb-10" *ngFor="let exp of experiencias">
+    <div class="experience-item flex mb-10" *ngFor="let exp of experiencias" data-aos="fade-right">
       <div class="img-experience text-center w-10">
         <span class="material-icons icon-experience">{{exp.icono}}</span>
       </div>
@@ -65,9 +65,9 @@
   </div>
 
   <!-- -------------------- Proyectos -------------------- -->
-  <div id="proyectos" class="projects-container w-70 p-20">
+  <div id="proyectos" class="projects-container w-70 p-20" data-aos="fade-up">
     <h2 class="section-title">{{ 'PROJECTS_TITLE' | translate }}</h2>
-    <div *ngFor="let project of proyectos" class="project-card flex mb-10">
+    <div *ngFor="let project of proyectos" class="project-card flex mb-10" data-aos="zoom-in">
       <div class="text-proyectos w-70">
         <span>{{ project.title }}</span>
         <p class="description">{{ project.description }}</p>

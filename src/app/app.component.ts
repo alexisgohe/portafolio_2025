@@ -9,6 +9,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface Experiencia {
   compania: string;
@@ -57,6 +59,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    AOS.init(); // Inicializar AOS
     this.updateTranslations();
   }
 
