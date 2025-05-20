@@ -28,5 +28,9 @@
   "PROJECT_VEHICULAR_TITLE": "Sistema de Control Vehicular",
   "PROJECT_VEHICULAR_DESC": "Implemento mejoras en un sistema de gestión vehicular.",
   "PROJECT_RESTAURANT_TITLE": "Landing Page Restaurante",
-  "PROJECT_RESTAURANT_DESC": "Desarrollé una página estática accesible para un restaurante ficticio, enfocándome en usabilidad e inclusión."
+  "PROJECT_RESTAURANT_DESC": "Desarrollé una página estática accesible para un restaurante ficticio, enfocándome en usabilidad e inclusión.",
+  "PROJECT_VEHICULOS_TITLE": "Vehículos de Procedencia Extranjera",
+  "PROJECT_VEHICULOS_DESC": "Implemente mejoras en un sistema de vehiculos.",
+  "PROJECT_PRODUCTORES_TITLE": "Padrón Estatal de Productores",
+  "PROJECT_PRODUCTORES_DESC": "Desarrollé modulos para el padrón estatal de productores, integrando APIs y carga de archivos en MinIO."
 }

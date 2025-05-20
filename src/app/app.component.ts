@@ -84,6 +84,10 @@ export class AppComponent {
         'PROJECT_VEHICULAR_DESC',
         'PROJECT_RESTAURANT_TITLE',
         'PROJECT_RESTAURANT_DESC',
+        'PROJECT_VEHICULOS_TITLE',
+        'PROJECT_VEHICULOS_DESC',
+        'PROJECT_PRODUCTORES_TITLE',
+        'PROJECT_PRODUCTORES_DESC',
       ])
       .subscribe((translations) => {
         this.experiencias = [
@@ -114,7 +118,7 @@ export class AppComponent {
               'assets/icons/java.svg',
               'assets/icons/postgresql.svg',
             ],
-            url: 'assets/proyectos.jpg',
+            url: 'assets/siafev.jpg',
           },
           {
             title: translations['PROJECT_VEHICULAR_TITLE'],
@@ -125,14 +129,36 @@ export class AppComponent {
               'assets/icons/spring.svg',
               'assets/icons/postgresql.svg',
             ],
-            url: 'assets/proyectos1.jpg',
+            url: 'assets/sicov.jpg',
+          },
+          {
+            title: translations['PROJECT_VEHICULOS_TITLE'],
+            description: translations['PROJECT_VEHICULOS_DESC'],
+            technologies: ['React', 'Spring', 'PostgreSQL'],
+            technologiesImg: [
+              'assets/icons/angular.svg',
+              'assets/icons/java.svg',
+              'assets/icons/postgresql.svg',
+            ],
+            url: 'assets/vehiculos.jpg',
+          },
+          {
+            title: translations['PROJECT_PRODUCTORES_TITLE'],
+            description: translations['PROJECT_PRODUCTORES_DESC'],
+            technologies: ['React', 'Spring', 'PostgreSQL'],
+            technologiesImg: [
+              'assets/icons/angular.svg',
+              'assets/icons/java.svg',
+              'assets/icons/postgresql.svg',
+            ],
+            url: 'assets/productores.jpg',
           },
           {
             title: translations['PROJECT_RESTAURANT_TITLE'],
             description: translations['PROJECT_RESTAURANT_DESC'],
             technologies: ['React'],
             technologiesImg: ['assets/icons/react.svg'],
-            url: 'assets/proyectos1.jpg',
+            url: 'assets/restaurante.jpg',
           },
         ];
       });

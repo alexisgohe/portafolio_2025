@@ -28,5 +28,9 @@
   "PROJECT_VEHICULAR_TITLE": "Vehicular Control System",
   "PROJECT_VEHICULAR_DESC": "Implemented improvements in a vehicular management system.",
   "PROJECT_RESTAURANT_TITLE": "Restaurant Landing Page",
-  "PROJECT_RESTAURANT_DESC": "Developed an accessible static page for a fictional restaurant, focusing on usability and inclusion."
+  "PROJECT_RESTAURANT_DESC": "Developed an accessible static page for a fictional restaurant, focusing on usability and inclusion.",
+  "PROJECT_VEHICULOS_TITLE": "Vehicle Control System",
+  "PROJECT_VEHICULOS_DESC": "Implemented improvements to a vehicle management system.",
+  "PROJECT_PRODUCTORES_TITLE": "State Registry of Producers",
+  "PROJECT_PRODUCTORES_DESC": "I developed modules for the state producer registry, integrating APIs and file uploads in MinIO."
 }
