@@ -67,7 +67,7 @@
   <!-- -------------------- Proyectos -------------------- -->
   <div id="proyectos" class="projects-container w-70 p-20" data-aos="fade-up">
     <h2 class="section-title">{{ 'PROJECTS_TITLE' | translate }}</h2>
-    <div *ngFor="let project of proyectos" class="project-card flex mb-10" data-aos="zoom-in">
+    <div *ngFor="let project of proyectos" class="project-card flex mb-10 w-100" data-aos="zoom-in">
       <div class="text-proyectos w-70">
         <span>{{ project.title }}</span>
         <p class="description">{{ project.description }}</p>
@@ -79,13 +79,15 @@
             </li>
           </ul>
           <div class="actions flex gap-10 mt-10">
-            <button class="code-btn">{{ 'VIEW_DEMO' | translate }}</button>
-            <button class="preview-btn">{{ 'VIEW_CODE' | translate }}</button>
+            <a *ngIf="project.button" href="https://alexisgohe.github.io/restaurante/" target="_blank"
+              class="code-btn">{{ 'VIEW_DEMO' | translate }}</a>
+            <a *ngIf="project.button" href="https://github.com/alexisgohe/restaurante" target="_blank"
+              class="preview-btn">{{ 'VIEW_CODE' | translate }}</a>
           </div>
         </div>
       </div>
       <div class="img-proyectos w-30">
-        <img src="{{project.url}}" alt="">
+        <img class="shadow-lg rounded-lg h-36" src="{{project.url}}" alt="">
       </div>
     </div>
   </div>
@@ -101,7 +103,8 @@
   <div class="separator"></div>
   <a (click)="toggleTheme()"><span class="material-icons icon-footer">dark_mode</span></a>
   <a (click)="switchLanguage()"><span class="material-icons icon-footer">description</span></a>
-  <a href="assets/pdf/Alexis_Gomez_Hernandez_Curriculum_Vitae.pdf" target="_blank"><span class="material-icons icon-footer">download</span></a>
+  <a href="assets/pdf/Alexis_Gomez_Hernandez_Curriculum_Vitae.pdf" target="_blank"><span
+      class="material-icons icon-footer">download</span></a>
 </div>
 
 <!-- -------------------- Footer -------------------- -->

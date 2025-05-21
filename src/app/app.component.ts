@@ -25,6 +25,7 @@ interface Project {
   technologies: string[];
   technologiesImg: string[];
   url: string;
+  button: boolean;
 }
 
 @Component({
@@ -119,6 +120,7 @@ export class AppComponent {
               'assets/icons/postgresql.svg',
             ],
             url: 'assets/siafev.jpg',
+            button: false,
           },
           {
             title: translations['PROJECT_VEHICULAR_TITLE'],
@@ -130,6 +132,7 @@ export class AppComponent {
               'assets/icons/postgresql.svg',
             ],
             url: 'assets/sicov.jpg',
+            button: false,
           },
           {
             title: translations['PROJECT_VEHICULOS_TITLE'],
@@ -141,6 +144,7 @@ export class AppComponent {
               'assets/icons/postgresql.svg',
             ],
             url: 'assets/vehiculos.jpg',
+            button: false,
           },
           {
             title: translations['PROJECT_PRODUCTORES_TITLE'],
@@ -152,6 +156,7 @@ export class AppComponent {
               'assets/icons/postgresql.svg',
             ],
             url: 'assets/productores.jpg',
+            button: false,
           },
           {
             title: translations['PROJECT_RESTAURANT_TITLE'],
@@ -159,6 +164,7 @@ export class AppComponent {
             technologies: ['React'],
             technologiesImg: ['assets/icons/react.svg'],
             url: 'assets/restaurante.jpg',
+            button: true,
           },
         ];
       });
