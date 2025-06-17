@@ -45,6 +45,8 @@ export class AppComponent {
   experiencias: Experiencia[] = [];
   proyectos: Project[] = [];
 
+  loading = true;
+
   constructor(
     private themeService: ThemeService,
     private translate: TranslateService,
@@ -61,9 +63,13 @@ export class AppComponent {
   async ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       const AOS = await import('aos');
-      AOS.init();
+      (AOS.default ?? AOS).init();
     }
-    this.updateTranslations();
+
+    this.translate.use(this.translate.getDefaultLang()).subscribe(() => {
+      this.updateTranslations();
+      this.loading = false;
+    });
   }
 
   // Método para actualizar las traducciones
