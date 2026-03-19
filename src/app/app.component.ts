@@ -266,17 +266,6 @@ export class AppComponent {
             ],
             url: 'assets/pos.jpg',
             button: false,
-          },
-          {
-            title: translations['PROJECT_CONSULTORIA_TITLE'],
-            description: translations['PROJECT_CONSULTORIA_DESC'],
-            technologies: ['NextJS', 'Node.js'],
-            technologiesImg: [
-              'assets/icons/nextjs.svg',
-              'assets/icons/nodedotjs.svg',
-            ],
-            url: 'assets/consultoria.jpg',
-            button: false,
           }
         ];
       });
